@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.LoginPage">
+<center>
+    <VBox alignment="CENTER" maxWidth="350" spacing="10">
+        <Text id="title" text="Cup Head!">
+            <font>
+               <Font size="34.0" />
+            </font></Text>
+        <Label text="Username" />
+        <TextField fx:id="usernameField" promptText="enter your username" />
+        <Label text="Password" />
+        <TextField fx:id="passwordField" promptText="enter your password" />
+         <VBox alignment="CENTER" prefHeight="93.0" prefWidth="230.0" spacing="5.0">
+            <children>
+              <Button fx:id="LoginButton" onMouseClicked="#login" prefHeight="31.0" prefWidth="73.0" styleClass="primary-btn" text="Login" />
+              <Button onMouseClicked="#register" styleClass="secondary-btn" text="Register" />
+               <Button onMouseClicked="#GuestLogin" prefHeight="31.0" prefWidth="76.0" styleClass="secondary-btn" text="Guest" />
+            </children>
+         </VBox>
+         <Text fx:id="loginMessage" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="" textAlignment="CENTER" visible="false" wrappingWidth="300.6708984375" />
+    </VBox>
+</center>
+</BorderPane>
